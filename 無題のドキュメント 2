@@ -1,9 +1,0 @@
-Ubuntu 命令笔记
-安装deb:sudo dpkg -i package.deb
-卸载软件：sudo dpkg -r software-name
-编译源代码三连：  ./configure
-		make
-		sudo make install
-去除apt锁：
-sudo rm /var/cache/apt/archives/lock
-sudo rm /var/lib/dpkg/lock
