@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>VS Code实现MarkDown同步预览 | CatasLi的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基本方法如下 command+shift+p呼出命令行，键入“markdown”后在命令列表中选择1Markdown: Open Preview to the side 亦可直接使用快捷键command+k V实现（空格代表先松了之前的按键再按下一个按键） 语法参考网址">
+  <meta name="description" content="基本方法如下 command+shift+p呼出命令行，键入“markdown”后在命令列表中选择1Markdown: Open Preview to the side 亦可直接使用快捷键command+k V实现（空格代表先松了之前的按键再按下一个按键） Tips插入图片1![altertext](image_path) 图片可以直接存在/images下，但也可以通过将config.yml">
 <meta name="keywords" content="笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="VS Code实现MarkDown同步预览">
 <meta property="og:url" content="http://yoursite.com/2019/01/12/VS-Code实现MarkDown同步预览/index.html">
 <meta property="og:site_name" content="CatasLi的博客">
-<meta property="og:description" content="基本方法如下 command+shift+p呼出命令行，键入“markdown”后在命令列表中选择1Markdown: Open Preview to the side 亦可直接使用快捷键command+k V实现（空格代表先松了之前的按键再按下一个按键） 语法参考网址">
+<meta property="og:description" content="基本方法如下 command+shift+p呼出命令行，键入“markdown”后在命令列表中选择1Markdown: Open Preview to the side 亦可直接使用快捷键command+k V实现（空格代表先松了之前的按键再按下一个按键） Tips插入图片1![altertext](image_path) 图片可以直接存在/images下，但也可以通过将config.yml">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/logo.png">
-<meta property="og:updated_time" content="2019-01-11T18:51:53.368Z">
+<meta property="og:updated_time" content="2019-01-17T16:09:34.247Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VS Code实现MarkDown同步预览">
-<meta name="twitter:description" content="基本方法如下 command+shift+p呼出命令行，键入“markdown”后在命令列表中选择1Markdown: Open Preview to the side 亦可直接使用快捷键command+k V实现（空格代表先松了之前的按键再按下一个按键） 语法参考网址">
+<meta name="twitter:description" content="基本方法如下 command+shift+p呼出命令行，键入“markdown”后在命令列表中选择1Markdown: Open Preview to the side 亦可直接使用快捷键command+k V实现（空格代表先松了之前的按键再按下一个按键） Tips插入图片1![altertext](image_path) 图片可以直接存在/images下，但也可以通过将config.yml">
 <meta name="twitter:image" content="http://yoursite.com/images/logo.png">
   
     <link rel="alternative" href="/atom.xml" title="CatasLi的博客" type="application/atom+xml">
@@ -181,7 +181,12 @@
 <p>基本方法如下</p>
 <p><kbd>command</kbd>+<kbd>shift</kbd>+<kbd>p</kbd>呼出命令行，键入“markdown”后在命令列表中选择<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Markdown: Open Preview to the side</span><br></pre></td></tr></table></figure></p>
 <p>亦可直接使用快捷键<kbd>command</kbd>+<kbd>k</kbd> <kbd>V</kbd>实现（空格代表先松了之前的按键再按下一个按键）</p>
-<p><a href="https://laravel-china.org/topics/621/you-will-be-able-to-master-these-markdown-grammars,“常用的MarkDown语法”" target="_blank" rel="noopener">语法参考网址</a></p>
+<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>插入图片<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![altertext](image_path)</span><br></pre></td></tr></table></figure></p>
+<p>图片可以直接存在<code>/images</code>下，但也可以通过将<code>config.yml</code>中的<code>post_asset_folder</code>设置为<code>true</code>，即可在新建post时在<code>/source/_post</code>下生成同名的文件夹供存放资源文件。</p>
+<h3 id="语法参考网址"><a href="#语法参考网址" class="headerlink" title="语法参考网址"></a>语法参考网址</h3><ul>
+<li><a href="https://laravel-china.org/topics/621/you-will-be-able-to-master-these-markdown-grammars" target="_blank" rel="noopener">常用的MarkDown语法</a></li>
+<li><a href="https://yanyinhong.github.io/2017/05/02/How-to-insert-image-in-hexo-post/" target="_blank" rel="noopener">Hexo博客搭建之在文章中插入图片</a></li>
+</ul>
 
       
 
@@ -214,6 +219,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2019/01/18/随笔其四/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          随笔其四
+        
+      </div>
+    </a>
+  
   
     <a href="/2019/01/10/Ubuntu-命令笔记/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">Ubuntu 命令笔记</div>
@@ -243,7 +257,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Tips"><span class="toc-number">1.</span> <span class="toc-text">Tips</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#语法参考网址"><span class="toc-number">1.1.</span> <span class="toc-text">语法参考网址</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -411,7 +425,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://kirito.space/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Kirito</a>
+              <a href="http://kiritoxf.coding.me/wind" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Kirito</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://leonardzhu-01.github.io" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Lenoard</a>
             </li>
           
         </ul>
