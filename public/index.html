@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>CatasLi的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -12,9 +12,9 @@
 <meta property="og:title" content="CatasLi的博客">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="CatasLi的博客">
-<meta property="og:locale" content="zh-Hans">
+<meta property="og:locale">
+<meta property="article:author" content="CatasLi">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CatasLi的博客">
   
     <link rel="alternative" href="/atom.xml" title="CatasLi的博客" type="application/atom+xml">
   
@@ -32,10 +32,10 @@
 
   
 
-<link rel="stylesheet" href="/assets/css/APlayer.min.css" class="aplayer-style-marker">
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/assets/css/APlayer.min.css" class="aplayer-style-marker">
 <script src="/assets/js/APlayer.min.js" class="aplayer-script-marker"></script>
 </head>
-</html>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -48,10 +48,8 @@
 			<img src="/img/bk2.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">CatasLi</a></h1>
+		  <h1 class="header-author"><a href="/"></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">我只想事情是它本来该有的那个样子</p>
 		
 
 		<nav class="header-menu">
@@ -59,7 +57,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
+				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 	        
 			</ul>
 		</nav>
@@ -106,10 +104,8 @@
 				<img src="/img/bk2.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">CatasLi</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>我只想事情是它本来该有的那个样子<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -137,7 +133,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -154,36 +150,27 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-PHP-CSV输出及相关调整" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-Coming-Back" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/17/PHP-CSV输出及相关调整/">PHP CSV输出及相关调整</a>
+      <a class="article-title" href="/2021/11/17/Coming-Back/">Hello Again!</a>
     </h1>
   
 
         
-        <a href="/2019/03/17/PHP-CSV输出及相关调整/" class="archive-article-date">
-  	<time datetime="2019-03-17T02:45:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-17</time>
+        <a href="/2021/11/17/Coming-Back/" class="archive-article-date">
+  	<time datetime="2021-11-16T16:37:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="CSV输出"><a href="#CSV输出" class="headerlink" title="CSV输出"></a>CSV输出</h2><p><code>fputcsv(resource $handle , array $fields):int</code><br>核心函数，将<code>$filelds</code>数组中的数据作为一行记录插入到<code>$hanlde</code>文件中，具体参见<a href="http://us3.php.net/manual/zh/function.fputcsv.php" target="_blank" rel="noopener">PHP:fputcsv()</a></p>
-<p>使用实例<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//要插入的数据</span></span><br><span class="line">$arr = <span class="keyword">array</span>(姓名,性别,年龄);</span><br><span class="line"><span class="comment">//要插入数据的csv文件</span></span><br><span class="line">$fp = fopen(<span class="string">"test.csv"</span>,<span class="string">"w"</span>);</span><br><span class="line"><span class="comment">//插入操作</span></span><br><span class="line"><span class="keyword">if</span> ($fp) &#123;</span><br><span class="line">    fputcsv($fp, $arr);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//关闭文件</span></span><br><span class="line">fclose($fp);</span><br></pre></td></tr></table></figure></p>
-<p>默认的UTF-8编码有时可能会导致输出结果出现乱码，这时可以用</p>
-<ul>
-<li><code>iconv ( $in_charset , $out_charset , $str ) : string</code><br>具体参见<a href="http://us3.php.net/manual/zh/function.iconv.php" target="_blank" rel="noopener">PHP:iconv()</a></li>
-<li><code>mb_convert_encoding ( $str , $to_encoding ) : string</code><br>具体参见<a href="http://us3.php.net/manual/zh/function.mb-convert-encoding.php" target="_blank" rel="noopener">PHP:mb_convert_encoding()</a></li>
-</ul>
-<h2 id="生成ZIP文件"><a href="#生成ZIP文件" class="headerlink" title="生成ZIP文件"></a>生成ZIP文件</h2><h3 id="无密码"><a href="#无密码" class="headerlink" title="无密码"></a>无密码</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$zip = <span class="keyword">new</span> ZipArchive();</span><br><span class="line">$result = $zip-&gt;open($zip_file_path, ZipArchive::CREATE);</span><br><span class="line"><span class="keyword">if</span> ($result) &#123;</span><br><span class="line">    $zip-&gt;addFile($compress_file_path);</span><br><span class="line">    $zip-&gt;close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="有密码"><a href="#有密码" class="headerlink" title="有密码"></a>有密码</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exec(<span class="string">"zip -P "</span>.$password.<span class="string">" "</span>.$zip_file.<span class="string">" "</span>.$compress_file_path);</span><br></pre></td></tr></table></figure>
-<p>由于之前的<code>ZipArchive</code>类没有提供有密码压缩的方法所以用<code>exec()</code>函数调用<code>zip</code>命令行实现。</p>
+        <p>又一次换新电脑，又一次本地环境搭建</p>
 
       
 
@@ -197,7 +184,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
@@ -207,7 +194,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/17/PHP-CSV输出及相关调整/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/11/17/Coming-Back/">展开全文 >></a>
         </p>
       
 
@@ -237,19 +224,106 @@
 
 
   
-    <article id="post-新年打卡" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-PHP-CSV输出及相关调整" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/05/新年打卡/">新年打卡</a>
+      <a class="article-title" href="/2019/03/17/PHP-CSV%E8%BE%93%E5%87%BA%E5%8F%8A%E7%9B%B8%E5%85%B3%E8%B0%83%E6%95%B4/">PHP CSV输出及相关调整</a>
     </h1>
   
 
         
-        <a href="/2019/02/05/新年打卡/" class="archive-article-date">
+        <a href="/2019/03/17/PHP-CSV%E8%BE%93%E5%87%BA%E5%8F%8A%E7%9B%B8%E5%85%B3%E8%B0%83%E6%95%B4/" class="archive-article-date">
+  	<time datetime="2019-03-17T02:45:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="CSV输出"><a href="#CSV输出" class="headerlink" title="CSV输出"></a>CSV输出</h2><p><code>fputcsv(resource $handle , array $fields):int</code><br>核心函数，将<code>$filelds</code>数组中的数据作为一行记录插入到<code>$hanlde</code>文件中，具体参见<a href="http://us3.php.net/manual/zh/function.fputcsv.php" target="_blank" rel="noopener">PHP:fputcsv()</a></p>
+<p>使用实例</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//要插入的数据</span></span><br><span class="line">$arr = <span class="keyword">array</span>(姓名,性别,年龄);</span><br><span class="line"><span class="comment">//要插入数据的csv文件</span></span><br><span class="line">$fp = fopen(<span class="string">"test.csv"</span>,<span class="string">"w"</span>);</span><br><span class="line"><span class="comment">//插入操作</span></span><br><span class="line"><span class="keyword">if</span> ($fp) &#123;</span><br><span class="line">    fputcsv($fp, $arr);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//关闭文件</span></span><br><span class="line">fclose($fp);</span><br></pre></td></tr></table></figure>
+
+<p>默认的UTF-8编码有时可能会导致输出结果出现乱码，这时可以用</p>
+<ul>
+<li><code>iconv ( $in_charset , $out_charset , $str ) : string</code><br>具体参见<a href="http://us3.php.net/manual/zh/function.iconv.php" target="_blank" rel="noopener">PHP:iconv()</a></li>
+<li><code>mb_convert_encoding ( $str , $to_encoding ) : string</code><br>具体参见<a href="http://us3.php.net/manual/zh/function.mb-convert-encoding.php" target="_blank" rel="noopener">PHP:mb_convert_encoding()</a></li>
+</ul>
+<h2 id="生成ZIP文件"><a href="#生成ZIP文件" class="headerlink" title="生成ZIP文件"></a>生成ZIP文件</h2><h3 id="无密码"><a href="#无密码" class="headerlink" title="无密码"></a>无密码</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$zip = <span class="keyword">new</span> ZipArchive();</span><br><span class="line">$result = $zip-&gt;open($zip_file_path, ZipArchive::CREATE);</span><br><span class="line"><span class="keyword">if</span> ($result) &#123;</span><br><span class="line">    $zip-&gt;addFile($compress_file_path);</span><br><span class="line">    $zip-&gt;close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="有密码"><a href="#有密码" class="headerlink" title="有密码"></a>有密码</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exec(<span class="string">"zip -P "</span>.$password.<span class="string">" "</span>.$zip_file.<span class="string">" "</span>.$compress_file_path);</span><br></pre></td></tr></table></figure>
+
+<p>由于之前的<code>ZipArchive</code>类没有提供有密码压缩的方法所以用<code>exec()</code>函数调用<code>zip</code>命令行实现。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/17/PHP-CSV%E8%BE%93%E5%87%BA%E5%8F%8A%E7%9B%B8%E5%85%B3%E8%B0%83%E6%95%B4/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-新年打卡" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/02/05/%E6%96%B0%E5%B9%B4%E6%89%93%E5%8D%A1/">新年打卡</a>
+    </h1>
+  
+
+        
+        <a href="/2019/02/05/%E6%96%B0%E5%B9%B4%E6%89%93%E5%8D%A1/" class="archive-article-date">
   	<time datetime="2019-02-04T16:14:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-05</time>
 </a>
         
@@ -260,12 +334,12 @@
         <p><img src="/images/chunjielianhuan.png" alt="春节联欢晚会"></p>
 <p>首次在海外度过农历春节，特此纪念。</p>
 
-        <div id="aplayer-FuKTgMvn" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-WYzLKCHf" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-FuKTgMvn"),
+            element: document.getElementById("aplayer-WYzLKCHf"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -305,7 +379,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/05/新年打卡/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/02/05/%E6%96%B0%E5%B9%B4%E6%89%93%E5%8D%A1/">展开全文 >></a>
         </p>
       
 
@@ -335,19 +409,19 @@
 
 
   
-    <article id="post-随笔其四" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-随笔其四" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/18/随笔其四/">随笔其四</a>
+      <a class="article-title" href="/2019/01/18/%E9%9A%8F%E7%AC%94%E5%85%B6%E5%9B%9B/">随笔其四</a>
     </h1>
   
 
         
-        <a href="/2019/01/18/随笔其四/" class="archive-article-date">
+        <a href="/2019/01/18/%E9%9A%8F%E7%AC%94%E5%85%B6%E5%9B%9B/" class="archive-article-date">
   	<time datetime="2019-01-17T15:43:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-18</time>
 </a>
         
@@ -379,7 +453,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/01/18/随笔其四/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/01/18/%E9%9A%8F%E7%AC%94%E5%85%B6%E5%9B%9B/">展开全文 >></a>
         </p>
       
 
@@ -409,19 +483,19 @@
 
 
   
-    <article id="post-VS-Code实现MarkDown同步预览" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-VS-Code实现MarkDown同步预览" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/12/VS-Code实现MarkDown同步预览/">VS Code实现MarkDown同步预览</a>
+      <a class="article-title" href="/2019/01/12/VS-Code%E5%AE%9E%E7%8E%B0MarkDown%E5%90%8C%E6%AD%A5%E9%A2%84%E8%A7%88/">VS Code实现MarkDown同步预览</a>
     </h1>
   
 
         
-        <a href="/2019/01/12/VS-Code实现MarkDown同步预览/" class="archive-article-date">
+        <a href="/2019/01/12/VS-Code%E5%AE%9E%E7%8E%B0MarkDown%E5%90%8C%E6%AD%A5%E9%A2%84%E8%A7%88/" class="archive-article-date">
   	<time datetime="2019-01-11T18:18:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-12</time>
 </a>
         
@@ -431,9 +505,13 @@
       
         <p><img src="/images/logo.png" alt="AlterText"></p>
 <p>基本方法如下</p>
-<p><kbd>command</kbd>+<kbd>shift</kbd>+<kbd>p</kbd>呼出命令行，键入“markdown”后在命令列表中选择<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Markdown: Open Preview to the side</span><br></pre></td></tr></table></figure></p>
+<p><kbd>command</kbd>+<kbd>shift</kbd>+<kbd>p</kbd>呼出命令行，键入“markdown”后在命令列表中选择</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Markdown: Open Preview to the side</span><br></pre></td></tr></table></figure>
+
 <p>亦可直接使用快捷键<kbd>command</kbd>+<kbd>k</kbd> <kbd>V</kbd>实现（空格代表先松了之前的按键再按下一个按键）</p>
-<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>插入图片<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![altertext](image_path)</span><br></pre></td></tr></table></figure></p>
+<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>插入图片</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![altertext](image_path)</span><br></pre></td></tr></table></figure>
+
 <p>图片可以直接存在<code>/images</code>下，但也可以通过将<code>config.yml</code>中的<code>post_asset_folder</code>设置为<code>true</code>，即可在新建post时在<code>/source/_post</code>下生成同名的文件夹供存放资源文件。</p>
 <h3 id="语法参考网址"><a href="#语法参考网址" class="headerlink" title="语法参考网址"></a>语法参考网址</h3><ul>
 <li><a href="https://laravel-china.org/topics/621/you-will-be-able-to-master-these-markdown-grammars" target="_blank" rel="noopener">常用的MarkDown语法</a></li>
@@ -462,7 +540,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/01/12/VS-Code实现MarkDown同步预览/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/01/12/VS-Code%E5%AE%9E%E7%8E%B0MarkDown%E5%90%8C%E6%AD%A5%E9%A2%84%E8%A7%88/">展开全文 >></a>
         </p>
       
 
@@ -492,19 +570,19 @@
 
 
   
-    <article id="post-Ubuntu-命令笔记" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-Ubuntu-命令笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/10/Ubuntu-命令笔记/">Ubuntu 命令笔记</a>
+      <a class="article-title" href="/2019/01/10/Ubuntu-%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0/">Ubuntu 命令笔记</a>
     </h1>
   
 
         
-        <a href="/2019/01/10/Ubuntu-命令笔记/" class="archive-article-date">
+        <a href="/2019/01/10/Ubuntu-%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0/" class="archive-article-date">
   	<time datetime="2019-01-10T12:58:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-10</time>
 </a>
         
@@ -512,11 +590,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>安装deb<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i package.deb</span><br></pre></td></tr></table></figure></p>
-<p>卸载软件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -r software-name</span><br></pre></td></tr></table></figure></p>
-<p>编译源代码三连<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure></p>
-<p>去除apt锁<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo rm /var/cache/apt/archives/lock</span><br><span class="line">sudo rm /var/lib/dpkg/lock</span><br></pre></td></tr></table></figure></p>
+        <p>安装deb</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i package.deb</span><br></pre></td></tr></table></figure>
 
+<p>卸载软件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -r software-name</span><br></pre></td></tr></table></figure>
+
+<p>编译源代码三连</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
+
+<p>去除apt锁</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo rm /var/cache/apt/archives/lock</span><br><span class="line">sudo rm /var/lib/dpkg/lock</span><br></pre></td></tr></table></figure>
       
 
       
@@ -539,7 +623,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/01/10/Ubuntu-命令笔记/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/01/10/Ubuntu-%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0/">展开全文 >></a>
         </p>
       
 
@@ -569,7 +653,7 @@
 
 
   
-    <article id="post-A-New-Start" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-A-New-Start" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -643,19 +727,19 @@
 
 
   
-    <article id="post-随笔其三" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-随笔其三" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/27/随笔其三/">随笔其三</a>
+      <a class="article-title" href="/2018/05/27/%E9%9A%8F%E7%AC%94%E5%85%B6%E4%B8%89/">随笔其三</a>
     </h1>
   
 
         
-        <a href="/2018/05/27/随笔其三/" class="archive-article-date">
+        <a href="/2018/05/27/%E9%9A%8F%E7%AC%94%E5%85%B6%E4%B8%89/" class="archive-article-date">
   	<time datetime="2018-05-27T07:05:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-27</time>
 </a>
         
@@ -687,7 +771,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/05/27/随笔其三/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/05/27/%E9%9A%8F%E7%AC%94%E5%85%B6%E4%B8%89/">展开全文 >></a>
         </p>
       
 
@@ -717,19 +801,19 @@
 
 
   
-    <article id="post-随笔其二" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-随笔其二" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/05/随笔其二/">随笔其二</a>
+      <a class="article-title" href="/2018/05/05/%E9%9A%8F%E7%AC%94%E5%85%B6%E4%BA%8C/">随笔其二</a>
     </h1>
   
 
         
-        <a href="/2018/05/05/随笔其二/" class="archive-article-date">
+        <a href="/2018/05/05/%E9%9A%8F%E7%AC%94%E5%85%B6%E4%BA%8C/" class="archive-article-date">
   	<time datetime="2018-05-05T06:02:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-05</time>
 </a>
         
@@ -739,12 +823,12 @@
       
         <h2 id="「遠く離れていても、愛する人はずっとあなたを見守っている。」"><a href="#「遠く離れていても、愛する人はずっとあなたを見守っている。」" class="headerlink" title="「遠く離れていても、愛する人はずっとあなたを見守っている。」"></a>「遠く離れていても、愛する人はずっとあなたを見守っている。」</h2><p>ヴァイオレット.エヴァーガーデンより</p>
 
-        <div id="aplayer-OUGgbcFo" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-bEiDbDaC" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-OUGgbcFo"),
+            element: document.getElementById("aplayer-bEiDbDaC"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -782,7 +866,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/05/05/随笔其二/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/05/05/%E9%9A%8F%E7%AC%94%E5%85%B6%E4%BA%8C/">展开全文 >></a>
         </p>
       
 
@@ -812,19 +896,19 @@
 
 
   
-    <article id="post-TensorFlow-安装笔记" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-TensorFlow-安装笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/05/TensorFlow-安装笔记/">TensorFlow 安装笔记</a>
+      <a class="article-title" href="/2018/05/05/TensorFlow-%E5%AE%89%E8%A3%85%E7%AC%94%E8%AE%B0/">TensorFlow 安装笔记</a>
     </h1>
   
 
         
-        <a href="/2018/05/05/TensorFlow-安装笔记/" class="archive-article-date">
+        <a href="/2018/05/05/TensorFlow-%E5%AE%89%E8%A3%85%E7%AC%94%E8%AE%B0/" class="archive-article-date">
   	<time datetime="2018-05-05T02:53:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-05</time>
 </a>
         
@@ -837,10 +921,19 @@
 <li>Python2.7.12</li>
 </ul>
 <h2 id="主要命令"><a href="#主要命令" class="headerlink" title="主要命令"></a>主要命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install python-pip python-dev</span><br><span class="line">$ sudo pip install tensorflow <span class="comment">#会自动安装依赖包</span></span><br></pre></td></tr></table></figure>
-<p>附上test.py测试用的代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"></span><br><span class="line">hello=tf.constant(<span class="string">"Hello TensorFlow!"</span>)</span><br><span class="line">sess=tf.Session()</span><br><span class="line"><span class="keyword">print</span> sess.run(hello)</span><br></pre></td></tr></table></figure></p>
-<p>附上Pycharm安装命令：<br>首先添加源<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:mystic-mirage/pycharm</span><br></pre></td></tr></table></figure></p>
-<p>然后根据需求安装正式版（收费需激活）或者社区版（免费）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt install pycharm <span class="comment">#社区版为pycharm-community</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips:"></a>Tips:</h2><p>程序运行时可能会出现“Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA”类似的提示（I），意思为当前CPU支持AVX（Advanced Vector Extensions），运算速度还可以提升，所以可以开启更好更快的模式，但是你现在用的模式相对来说可能不是那么快，所以这个其实并不是存在错误，所以如果不嫌当前的模式慢就忽略掉这个警告就好了。 <a href="https://blog.csdn.net/CliuGeek/article/details/78836598" target="_blank" rel="noopener">参考网址</a><br>强迫症解决方案：<br>在程序前加上：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import os</span><br><span class="line">os.environ[&apos;TF_CPP_MIN_LOG_LEVEL&apos;] = &apos;2&apos;</span><br></pre></td></tr></table></figure></p>
+
+<p>附上test.py测试用的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"></span><br><span class="line">hello=tf.constant(<span class="string">"Hello TensorFlow!"</span>)</span><br><span class="line">sess=tf.Session()</span><br><span class="line"><span class="keyword">print</span> sess.run(hello)</span><br></pre></td></tr></table></figure>
+
+<p>附上Pycharm安装命令：<br>首先添加源</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:mystic-mirage/pycharm</span><br></pre></td></tr></table></figure>
+
+<p>然后根据需求安装正式版（收费需激活）或者社区版（免费）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt install pycharm <span class="comment">#社区版为pycharm-community</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips:"></a>Tips:</h2><p>程序运行时可能会出现“Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA”类似的提示（I），意思为当前CPU支持AVX（Advanced Vector Extensions），运算速度还可以提升，所以可以开启更好更快的模式，但是你现在用的模式相对来说可能不是那么快，所以这个其实并不是存在错误，所以如果不嫌当前的模式慢就忽略掉这个警告就好了。 <a href="https://blog.csdn.net/CliuGeek/article/details/78836598" target="_blank" rel="noopener">参考网址</a><br>强迫症解决方案：<br>在程序前加上：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import os</span><br><span class="line">os.environ[&apos;TF_CPP_MIN_LOG_LEVEL&apos;] = &apos;2&apos;</span><br></pre></td></tr></table></figure>
+
 <p>这样可以关闭提示。</p>
 
       
@@ -865,82 +958,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/05/05/TensorFlow-安装笔记/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-随笔其一" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/03/随笔其一/">随笔其一</a>
-    </h1>
-  
-
-        
-        <a href="/2018/05/03/随笔其一/" class="archive-article-date">
-  	<time datetime="2018-05-03T05:23:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"Hello World!"</span></span><br></pre></td></tr></table></figure>
-<p>你好，世界</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/05/03/随笔其一/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/05/05/TensorFlow-%E5%AE%89%E8%A3%85%E7%AC%94%E8%AE%B0/">展开全文 >></a>
         </p>
       
 
@@ -972,7 +990,7 @@
   
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
     </nav>
   
 
@@ -984,7 +1002,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 CatasLi
+    		&copy; 2021 CatasLi
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -1067,11 +1085,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
             
             <div class="clearfix"></div>
@@ -1079,7 +1097,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
+            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:

@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>PHP CSV输出及相关调整 | CatasLi的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="CSV输出fputcsv(resource $handle , array $fields):int核心函数，将$filelds数组中的数据作为一行记录插入到$hanlde文件中，具体参见PHP:fputcsv() 使用实例12345678910//要插入的数据$arr = array(姓名,性别,年龄);//要插入数据的csv文件$fp = fopen(&quot;test.csv&quot;,&quot;w&quot;);//插入操">
-<meta name="keywords" content="笔记">
+  <meta name="description" content="CSV输出fputcsv(resource $handle , array $fields):int核心函数，将$filelds数组中的数据作为一行记录插入到$hanlde文件中，具体参见PHP:fputcsv() 使用实例 12345678910&#x2F;&#x2F;要插入的数据$arr &#x3D; array(姓名,性别,年龄);&#x2F;&#x2F;要插入数据的csv文件$fp &#x3D; fopen(&quot;test.csv&quot;,&quot;w&quot;);&#x2F;&#x2F;插入">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PHP CSV输出及相关调整">
-<meta property="og:url" content="http://yoursite.com/2019/03/17/PHP-CSV输出及相关调整/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/03/17/PHP-CSV%E8%BE%93%E5%87%BA%E5%8F%8A%E7%9B%B8%E5%85%B3%E8%B0%83%E6%95%B4/index.html">
 <meta property="og:site_name" content="CatasLi的博客">
-<meta property="og:description" content="CSV输出fputcsv(resource $handle , array $fields):int核心函数，将$filelds数组中的数据作为一行记录插入到$hanlde文件中，具体参见PHP:fputcsv() 使用实例12345678910//要插入的数据$arr = array(姓名,性别,年龄);//要插入数据的csv文件$fp = fopen(&quot;test.csv&quot;,&quot;w&quot;);//插入操">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-17T06:24:21.950Z">
+<meta property="og:description" content="CSV输出fputcsv(resource $handle , array $fields):int核心函数，将$filelds数组中的数据作为一行记录插入到$hanlde文件中，具体参见PHP:fputcsv() 使用实例 12345678910&#x2F;&#x2F;要插入的数据$arr &#x3D; array(姓名,性别,年龄);&#x2F;&#x2F;要插入数据的csv文件$fp &#x3D; fopen(&quot;test.csv&quot;,&quot;w&quot;);&#x2F;&#x2F;插入">
+<meta property="og:locale">
+<meta property="article:published_time" content="2019-03-17T02:45:02.000Z">
+<meta property="article:modified_time" content="2019-03-17T06:24:21.000Z">
+<meta property="article:author" content="CatasLi">
+<meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PHP CSV输出及相关调整">
-<meta name="twitter:description" content="CSV输出fputcsv(resource $handle , array $fields):int核心函数，将$filelds数组中的数据作为一行记录插入到$hanlde文件中，具体参见PHP:fputcsv() 使用实例12345678910//要插入的数据$arr = array(姓名,性别,年龄);//要插入数据的csv文件$fp = fopen(&quot;test.csv&quot;,&quot;w&quot;);//插入操">
   
     <link rel="alternative" href="/atom.xml" title="CatasLi的博客" type="application/atom+xml">
   
@@ -37,8 +37,8 @@
 
   
 
-</head>
-</html>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -51,10 +51,8 @@
 			<img src="/img/bk2.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">CatasLi</a></h1>
+		  <h1 class="header-author"><a href="/"></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">我只想事情是它本来该有的那个样子</p>
 		
 
 		<nav class="header-menu">
@@ -62,7 +60,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
+				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 	        
 			</ul>
 		</nav>
@@ -109,10 +107,8 @@
 				<img src="/img/bk2.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">CatasLi</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>我只想事情是它本来该有的那个样子<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -140,7 +136,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -155,7 +151,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-PHP-CSV输出及相关调整" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-PHP-CSV输出及相关调整" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -167,7 +163,7 @@
   
 
         
-        <a href="/2019/03/17/PHP-CSV输出及相关调整/" class="archive-article-date">
+        <a href="/2019/03/17/PHP-CSV%E8%BE%93%E5%87%BA%E5%8F%8A%E7%9B%B8%E5%85%B3%E8%B0%83%E6%95%B4/" class="archive-article-date">
   	<time datetime="2019-03-17T02:45:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-17</time>
 </a>
         
@@ -176,14 +172,18 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="CSV输出"><a href="#CSV输出" class="headerlink" title="CSV输出"></a>CSV输出</h2><p><code>fputcsv(resource $handle , array $fields):int</code><br>核心函数，将<code>$filelds</code>数组中的数据作为一行记录插入到<code>$hanlde</code>文件中，具体参见<a href="http://us3.php.net/manual/zh/function.fputcsv.php" target="_blank" rel="noopener">PHP:fputcsv()</a></p>
-<p>使用实例<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//要插入的数据</span></span><br><span class="line">$arr = <span class="keyword">array</span>(姓名,性别,年龄);</span><br><span class="line"><span class="comment">//要插入数据的csv文件</span></span><br><span class="line">$fp = fopen(<span class="string">"test.csv"</span>,<span class="string">"w"</span>);</span><br><span class="line"><span class="comment">//插入操作</span></span><br><span class="line"><span class="keyword">if</span> ($fp) &#123;</span><br><span class="line">    fputcsv($fp, $arr);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//关闭文件</span></span><br><span class="line">fclose($fp);</span><br></pre></td></tr></table></figure></p>
+<p>使用实例</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//要插入的数据</span></span><br><span class="line">$arr = <span class="keyword">array</span>(姓名,性别,年龄);</span><br><span class="line"><span class="comment">//要插入数据的csv文件</span></span><br><span class="line">$fp = fopen(<span class="string">"test.csv"</span>,<span class="string">"w"</span>);</span><br><span class="line"><span class="comment">//插入操作</span></span><br><span class="line"><span class="keyword">if</span> ($fp) &#123;</span><br><span class="line">    fputcsv($fp, $arr);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//关闭文件</span></span><br><span class="line">fclose($fp);</span><br></pre></td></tr></table></figure>
+
 <p>默认的UTF-8编码有时可能会导致输出结果出现乱码，这时可以用</p>
 <ul>
 <li><code>iconv ( $in_charset , $out_charset , $str ) : string</code><br>具体参见<a href="http://us3.php.net/manual/zh/function.iconv.php" target="_blank" rel="noopener">PHP:iconv()</a></li>
 <li><code>mb_convert_encoding ( $str , $to_encoding ) : string</code><br>具体参见<a href="http://us3.php.net/manual/zh/function.mb-convert-encoding.php" target="_blank" rel="noopener">PHP:mb_convert_encoding()</a></li>
 </ul>
 <h2 id="生成ZIP文件"><a href="#生成ZIP文件" class="headerlink" title="生成ZIP文件"></a>生成ZIP文件</h2><h3 id="无密码"><a href="#无密码" class="headerlink" title="无密码"></a>无密码</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$zip = <span class="keyword">new</span> ZipArchive();</span><br><span class="line">$result = $zip-&gt;open($zip_file_path, ZipArchive::CREATE);</span><br><span class="line"><span class="keyword">if</span> ($result) &#123;</span><br><span class="line">    $zip-&gt;addFile($compress_file_path);</span><br><span class="line">    $zip-&gt;close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h3 id="有密码"><a href="#有密码" class="headerlink" title="有密码"></a>有密码</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exec(<span class="string">"zip -P "</span>.$password.<span class="string">" "</span>.$zip_file.<span class="string">" "</span>.$compress_file_path);</span><br></pre></td></tr></table></figure>
+
 <p>由于之前的<code>ZipArchive</code>类没有提供有密码压缩的方法所以用<code>exec()</code>函数调用<code>zip</code>命令行实现。</p>
 
       
@@ -217,8 +217,17 @@
   
 <nav id="article-nav">
   
+    <a href="/2021/11/17/Coming-Back/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Hello Again!
+        
+      </div>
+    </a>
   
-    <a href="/2019/02/05/新年打卡/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2019/02/05/%E6%96%B0%E5%B9%B4%E6%89%93%E5%8D%A1/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">新年打卡</div>
       <i class="icon-circle-right"></i>
     </a>
@@ -246,7 +255,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#CSV输出"><span class="toc-number">1.</span> <span class="toc-text">CSV输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生成ZIP文件"><span class="toc-number">2.</span> <span class="toc-text">生成ZIP文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#无密码"><span class="toc-number">2.1.</span> <span class="toc-text">无密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#有密码"><span class="toc-number">2.2.</span> <span class="toc-text">有密码</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#CSV%E8%BE%93%E5%87%BA"><span class="toc-number">1.</span> <span class="toc-text">CSV输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E6%88%90ZIP%E6%96%87%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text">生成ZIP文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E5%AF%86%E7%A0%81"><span class="toc-number">2.1.</span> <span class="toc-text">无密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E5%AF%86%E7%A0%81"><span class="toc-number">2.2.</span> <span class="toc-text">有密码</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -275,7 +284,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 CatasLi
+    		&copy; 2021 CatasLi
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -358,11 +367,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
             
             <div class="clearfix"></div>
@@ -370,7 +379,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
+            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:
